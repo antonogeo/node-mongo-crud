@@ -1,0 +1,11 @@
+{
+  "name": "node-mongo-crud",
+  "version": "1.0.0",
+  "description": "A RESTful Crud API built with NodeJS and Mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "antonogeo",
+  "license": "ISC"
+}
