@@ -1,5 +1,5 @@
 const express = require('express');
-const accounts = require('./routes/AccountRouter');
+const accounts = require('./api/routes/AccountRouter');
 const dbProperties = require('./config/db');
 const mongoose = require('mongoose');
 

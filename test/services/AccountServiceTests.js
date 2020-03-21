@@ -1,8 +1,8 @@
 const chai = require('chai');
 const sinon = require('sinon');
 
-const AccountService = require('../../services/AccountService');
-const AccountRepository= require('../../repositories/AccountRepository');
+const AccountService = require('../../api/services/AccountService');
+const AccountRepository= require('../../api/repositories/AccountRepository');
 
 describe('Account Service Tests', () => {
 
