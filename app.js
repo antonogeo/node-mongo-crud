@@ -1,11 +1,13 @@
 const express = require('express');
+const accounts = require('./routes/AccountRouter');
+const dbProperties = require('./config/db');
+const mongoose = require('mongoose');
+
 const app = express();
 
-const dbProperties = require('./config/db');
+app.use('/accounts', accounts);
 
-const mongoose = require('mongoose');
 mongoose.connect(dbProperties.url, { useNewUrlParser: true });
-mongoose.set('useCreateIndex', true);
 
 app.use((req, res, next) =>{
   const error = new Error('Not found');
