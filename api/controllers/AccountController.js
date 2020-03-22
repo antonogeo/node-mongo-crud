@@ -22,4 +22,12 @@ function createAccount (req, res, next) {
     });
 }
 
-module.exports = { getAccount, createAccount }
+function deleteAccount (req, res, next) {
+    AccountService.deleteAccount(req.params.id).then(id => {
+        res.status(200).json({ id: id })
+    }).catch(err => {
+        res.status(500).json({ error: err.message })
+    });
+}
+
+module.exports = { getAccount, createAccount, deleteAccount }

@@ -31,8 +31,6 @@ describe('Account Service Tests', () => {
 
     it('should create an acccount', (done) => {
         // Given
-        const id = '5e75fc46cfc35c3fbceaf36b';
-
         const account = {
             email: 'test22@gmail.com',
             firstName: 'George',
@@ -47,6 +45,27 @@ describe('Account Service Tests', () => {
             chai.expect(actual.email).to.equal(account.email);
             chai.expect(actual.firstName).to.equal(account.firstName);
             chai.expect(actual.age).to.equal(account.age);
+            done();
+        });
+    });
+
+    it('should delete an acccount', (done) => {
+        // Given
+        const id = '5e75fc46cfc35c3fbceaf36b';
+
+        const account = {
+            _id: id,
+            email: 'test22@gmail.com',
+            firstName: 'George',
+            age: 22
+        }
+
+        sinon.stub(AccountRepository, 'deleteAccount').resolves(account);
+
+        // When
+        AccountService.deleteAccount(account).then(actual => {
+            // Then
+            chai.expect(actual).to.equal(id);
             done();
         });
     });

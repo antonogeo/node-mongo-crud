@@ -16,4 +16,8 @@ function createAccount(account) {
     return mongoAccount.save();
 }
 
-module.exports = { getAccount, createAccount }
+function deleteAccount(id) {
+    return Account.findOneAndDelete(id).exec();
+}
+
+module.exports = { getAccount, createAccount, deleteAccount }

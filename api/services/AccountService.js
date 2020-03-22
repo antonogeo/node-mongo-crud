@@ -12,4 +12,10 @@ function createAccount(account) {
     .catch(err => { return err; });
 }
 
-module.exports = { getAccount, createAccount}
+function deleteAccount(id) {
+    return AccountRepository.deleteAccount(id)
+    .then(account => { return account._id; })
+    .catch(err => { return err; });
+}
+
+module.exports = { getAccount, createAccount, deleteAccount}
