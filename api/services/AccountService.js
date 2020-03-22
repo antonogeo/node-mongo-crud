@@ -6,4 +6,10 @@ function getAccount(id) {
     .catch(err => { return err; });
 }
 
-module.exports = { getAccount }
+function createAccount(account) {
+    return AccountRepository.createAccount(account)
+    .then(account => { return account; })
+    .catch(err => { return err; });
+}
+
+module.exports = { getAccount, createAccount}
