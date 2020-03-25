@@ -1,6 +1,6 @@
-# Node Mongo CRUD API
+# Node.js MongoDB API
 
-Crud API built using Node.js and MongoDB.
+A simple API built using Node.js and MongoDB.
 
 ##  Start the app
 
